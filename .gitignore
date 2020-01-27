@@ -1,0 +1,13 @@
+result*
+__pycache__
+*.csv
+.idea
+.ipynb_checkpoints
+evaluation
+env
+exp-paper-simple.build
+*.key
+env-pypy
+.vscode
+sfctss.egg-info
+dist
