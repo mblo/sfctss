@@ -214,4 +214,4 @@ We are happy for all kind of contributions, including bug fixes and additional f
 
 # Acknowledgement
 
-This work has been funded by the German Federal Ministry of Education and Research ([BMBF](https://www.bmbf.de)) Software Campus grant 01IS17050.
+This work has been funded by the German Federal Ministry of Education and Research ([BMBF](https://www.bmbf.de)) Software Campus grant 01IS17050 and the German Research Foundation (DFG) as part of the projects B2 and C7 in the Collaborative Research Center (CRC) 1053 “MAKI”.
