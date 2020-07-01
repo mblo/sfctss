@@ -214,4 +214,4 @@ We are happy for all kind of contributions, including bug fixes and additional f
 
 # Acknowledgement
 
-This work has been funded by the German Federal Ministry of Education and Research ([BMBF](https://www.bmbf.de)) Software Campus grant 01IS17050 and the German Research Foundation (DFG) as part of the projects B2 and C7 in the Collaborative Research Center (CRC) 1053 “MAKI”.
+This work has been co-funded by the Federal Ministry of Education and Research ([BMBF](https://www.bmbf.de)) Software Campus grant 01IS17050, the German Research Foundation ([DFG](https://www.dfg.de)) as part of the projects B2 and C7 in the Collaborative Research Center (CRC) 1053 “MAKI” and DFG grant 392046569 (61761136014 for NSFC), and the EU H2020 program under grant ICT-815279 “5G-VINNI” and ERC grant FP7-617805 “LiveSoft”. 
