@@ -6,7 +6,7 @@
 # SFC TSS - Traffic Scheduling Simulator
 
 **SFC TSS** - **S**ervice **F**unction **C**hain (SFC) **t**raffic **s**cheduling **s**imulator - is an Apache2 licensed packet-level discrete event simulator.
-SFC TSS simulates the SFC traffic scheduling problem as described in our paper ["Letting off STEAM: Distributed Runtime Traffic Scheduling for Service Function Chaining"](http://linwang.info/docs/infocom20.pdf).
+SFC TSS simulates the SFC traffic scheduling problem as described in our paper ["Letting off STEAM: Distributed Runtime Traffic Scheduling for Service Function Chaining"](https://linwang.info/docs/infocom20-steam.pdf).
 We refer to this paper for more information on [RFC 7665](https://tools.ietf.org/html/rfc7665) and the features of the simulator.
 SFC TSS simulates scenarios in compliance with [RFC 7665](https://tools.ietf.org/html/rfc7665) including link latencies, packet handling at the various SFC components like SFFs, SFIs and server.
 
@@ -15,8 +15,10 @@ If you use SFC TSS in your research, please cite our paper:
 ```
 @inproceedings{bloecher2020steam,
   title={Letting off STEAM: Distributed Runtime Traffic Scheduling for Service Function Chaining},
-  author={Bl{\"o}cher, Marcel and Khalili, Ramin and Wang, Lin and Eugster, Patrick},
-  booktitle={IEEE International Conference on Computer Communications (INFOCOM)},
+  author={Blöcher, Marcel and Khalili, Ramin and Wang, Lin and Eugster, Patrick},
+  booktitle={IEEE INFOCOM 2020 - IEEE Conference on Computer Communications},
+  pages={824-833},
+  doi = {10.1109/INFOCOM41043.2020.9155404},
   year={2020}
 }
 ```
