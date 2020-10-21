@@ -279,7 +279,7 @@ class SFI(object):
             self.sim.schedule_event(NetworkDelayEvent(delay=delay,
                                                       inner_packet=packet,
                                                       source=self,
-                                                      dest_id=self.sffId,
+                                                      dest_id=self.next_hop.id,
                                                       source_is_sff=False,
                                                       dest_is_sff=False))
         else:
