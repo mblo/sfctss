@@ -84,7 +84,7 @@ Feature: Simulator Basic Tests
       | GreedyOracle | 6      | 0.18                  | 0.41                     | 0       | 0.5                     |
       | GreedyLocal  | 6      | 0.16                  | 0.42                     | 0       | 6.1                     |
       | MPP          | 6      | 0.27                  | 0.39                     | 0       | 0.09                    |
-      | DMPP         | 6      | 0.23                  | 0.41                     | 0       | 3.6                     |
+      | DMPP         | 6      | 0.23                  | 0.41                     | 0       | 3.7                     |
 
     Examples: over provisioned
       | scheduler    | server | expected_success_rate | expected_service_quality | latency | expected_max_idle_ratio |
@@ -132,7 +132,7 @@ Feature: Simulator Basic Tests
       | GreedyOracle | 10     | .55                   | .14                  | .44                      | 1              | 0                   | 0                  | 1                       |
       | GreedyLocal  | 10     | .44                   | .18                  | .47                      | 1              | 0                   | 0                  | 23                      |
       | MPP          | 10     | .70                   | .28                  | .52                      | 1              | 0                   | 0                  | 1                       |
-      | DMPP         | 10     | .43                   | .28                  | .52                      | 1              | 0                   | 0                  | 30                      |
+      | DMPP         | 10     | .45                   | .28                  | .52                      | 1              | 0                   | 0                  | 30                      |
 
     Examples: with SFI-SFF latency
       | scheduler    | server | expected_success_rate | expected_reject_rate | expected_service_quality | packet_on_wire | within_site_latency | inter_site_latency | expected_max_idle_ratio |
