@@ -76,7 +76,7 @@ Feature: Simulator Basic Tests
       | GreedyOracle | 6      | 0.18                  | 0.41                     | 100     | 0.6                     |
       | GreedyLocal  | 6      | 0.16                  | 0.42                     | 100     | 6                       |
       | MPP          | 6      | 0.28                  | 0.39                     | 100     | 0.43                    |
-      | DMPP         | 6      | 0.20                  | 0.39                     | 100     | 0.93                    |
+      | DMPP         | 6      | 0.20                  | 0.39                     | 100     | 3                       |
 
     Examples: more resources and no latency
       | scheduler    | server | expected_success_rate | expected_service_quality | latency | expected_max_idle_ratio |
@@ -156,4 +156,4 @@ Feature: Simulator Basic Tests
       | GreedyOracle | 10     | .31                   | .21                  | .26                      | 2500           | 5000                | 50000              | 43                      |
       | GreedyLocal  | 10     | .33                   | .19                  | .24                      | 2500           | 5000                | 50000              | 39                      |
       | MPP          | 10     | .15                   | .14                  | .07                      | 2500           | 5000                | 50000              | 46                      |
-      | DMPP         | 10     | .39                   | .20                  | .24                      | 2500           | 5000                | 50000              | 31                      |
+      | DMPP         | 10     | .39                   | .20                  | .24                      | 2500           | 5000                | 50000              | 32                      |
