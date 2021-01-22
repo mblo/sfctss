@@ -58,9 +58,9 @@ Feature: Simulator Basic Tests
     When we let the simulation run till all processing is done
     Then the idle time of the servers is on avg below "<expected_max_idle_ratio>"%
     Then no packet is still in the simulator
-    Then success rate is in the range of "<expected_success_rate>" allow delta 0.01
-    Then service quality is in the range of "<expected_service_quality>" allow delta 0.01
-    Then reject rate is in the range of "0" allow delta 0.01
+    Then success rate is in the range of "<expected_success_rate>" allow delta 0.02
+    Then service quality is in the range of "<expected_service_quality>" allow delta 0.02
+    Then reject rate is in the range of "0" allow delta 0.02
 
     Examples: Sparse resources
       | scheduler    | server | expected_success_rate | expected_service_quality | latency | expected_max_idle_ratio |
@@ -124,7 +124,7 @@ Feature: Simulator Basic Tests
     Then success rate is in the range of "<expected_success_rate>" allow delta 0.02
     Then service quality is in the range of "<expected_service_quality>" allow delta 0.02
     Then the idle time of the servers is on avg below "<expected_max_idle_ratio>"%
-    Then reject rate is in the range of "<expected_reject_rate>" allow delta 0.01
+    Then reject rate is in the range of "<expected_reject_rate>" allow delta 0.02
 
     Examples: no latency
       | scheduler    | server | expected_success_rate | expected_reject_rate | expected_service_quality | packet_on_wire | within_site_latency | inter_site_latency | expected_max_idle_ratio |
