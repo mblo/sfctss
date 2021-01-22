@@ -3,19 +3,22 @@ import itertools
 import random
 
 import sure
-
 from behave import given, when, then, step, register_type
 from parse_type import TypeBuilder
 
 import sfctss
-from sfctss.scheduler.examples import GreedyShortestDeadlineFirstScheduler, LoadUnawareRoundRobinScheduler, RejectScheduler
+from sfctss.scheduler.examples import GreedyShortestDeadlineFirstScheduler, MppScheduler, LoadUnawareRoundRobinScheduler, RejectScheduler
 
 SCHEDULER_GREEDY_ORACLE = "GreedyOracle"
 SCHEDULER_GREEDY_LOCAL = "GreedyLocal"
+SCHEDULER_MPP = "MPP"
+SCHEDULER_DMPP = "DMPP"
 SCHEDULER_STATIC = "Static"
 SCHEDULER_REJECT = "Reject"
 schedulers = [SCHEDULER_GREEDY_ORACLE,
               SCHEDULER_GREEDY_LOCAL,
+              SCHEDULER_MPP,
+              SCHEDULER_DMPP,
               SCHEDULER_STATIC,
               SCHEDULER_REJECT]
 parse_scheduler = TypeBuilder.make_choice(schedulers)
@@ -40,6 +43,9 @@ default_config = {
     'admission_threshold_low': 0.8,
     'scheduler_incremental': True,
     'scheduler_per_packet_scheduling': True,
+    'allow_up_to_x_packets_underway_per_server': 5,
+    'mpp_scheduler_block_sfi_while_packet_on_wire': False,
+    'mpp_scheduler_consider_alpha_by_using_timeouts': True,
     'seed': 0,
     'server_capacity': 100,
     'workload_deadline_scaling': 50,
@@ -153,6 +159,35 @@ def step_impl(context, total_sff, scheduler):
                                                              admission_control_threshold_high=
                                                              context.sim_conf[
                                                                  'admission_threshold_high'])
+    elif scheduler == SCHEDULER_MPP:
+        sched = lambda: MppScheduler(sim=context.sim,
+                                     incremental=context.sim_conf['scheduler_incremental'],
+                                     oracle=True,
+                                     block_sfi_while_packet_on_wire=context.sim_conf[
+                                         'mpp_scheduler_block_sfi_while_packet_on_wire'],
+                                     consider_alpha_by_using_timeouts=context.sim_conf[
+                                         'mpp_scheduler_consider_alpha_by_using_timeouts'],
+                                     allow_up_to_x_packets_underway_per_server=context.sim_conf[
+                                         'allow_up_to_x_packets_underway_per_server'],
+                                     admission_control_threshold_low=context.sim_conf[
+                                         'admission_threshold_low'],
+                                     admission_control_threshold_high=context.sim_conf[
+                                         'admission_threshold_high'])
+    elif scheduler == SCHEDULER_DMPP:
+        sched = lambda: MppScheduler(sim=context.sim,
+                                     incremental=context.sim_conf['scheduler_incremental'],
+                                     oracle=False,
+                                     block_sfi_while_packet_on_wire=context.sim_conf[
+                                         'mpp_scheduler_block_sfi_while_packet_on_wire'],
+                                     consider_alpha_by_using_timeouts=context.sim_conf[
+                                         'mpp_scheduler_consider_alpha_by_using_timeouts'],
+                                     allow_up_to_x_packets_underway_per_server=context.sim_conf[
+                                         'allow_up_to_x_packets_underway_per_server'],
+                                     admission_control_threshold_low=context.sim_conf[
+                                         'admission_threshold_low'],
+                                     admission_control_threshold_high=context.sim_conf[
+                                         'admission_threshold_high'])
+    
     elif scheduler == SCHEDULER_STATIC:
         sched = lambda: LoadUnawareRoundRobinScheduler(sim=context.sim,
                                                        incremental=context.sim_conf['scheduler_incremental'],

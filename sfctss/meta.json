@@ -1,7 +1,7 @@
 {
-  "version": "0.9.2",
+  "version": "1.0.0",
   "title": "sfctss",
   "author": "Marcel Blöcher",
   "license": "Apache 2.0",
-  "copyright": "2018-2020, Marcel Blöcher"
+  "copyright": "2018-2021, Marcel Blöcher"
 }

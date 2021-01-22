@@ -98,7 +98,7 @@ class Sim(object):
         self.packed_generator_is_done = False
         
         print(f"# SFC TSS - Traffic Scheduling Simulator")
-        print(f"# Version {__version__}, {__copyright__}")
+        print(f"# Version {__version__}")
         
         # initialize global fields
         class Props:

@@ -29,8 +29,8 @@ setup(
         'sfctss': ['meta.json'],
     },
     install_requires=[
-        "numpy>=1.18.1",
-        "sortedcontainers>=2.1.0",
+        "numpy>=1.19.5",
+        "sortedcontainers>=2.3.0",
         "terminaltables>=3.1.0"
     ],
     classifiers=[
