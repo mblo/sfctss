@@ -132,7 +132,7 @@ Feature: Simulator Basic Tests
       | GreedyOracle | 10     | .55                   | .14                  | .44                      | 1              | 0                   | 0                  | 1                       |
       | GreedyLocal  | 10     | .44                   | .18                  | .47                      | 1              | 0                   | 0                  | 23                      |
       | MPP          | 10     | .70                   | .28                  | .52                      | 1              | 0                   | 0                  | 1                       |
-      | DMPP         | 10     | .45                   | .28                  | .52                      | 1              | 0                   | 0                  | 30                      |
+      | DMPP         | 10     | .45                   | .28                  | .52                      | 1              | 0                   | 0                  | 31                      |
 
     Examples: with SFI-SFF latency
       | scheduler    | server | expected_success_rate | expected_reject_rate | expected_service_quality | packet_on_wire | within_site_latency | inter_site_latency | expected_max_idle_ratio |
@@ -140,7 +140,7 @@ Feature: Simulator Basic Tests
       | GreedyOracle | 10     | .52                   | .16                  | .44                      | 2500           | 5000                | 0                  | 20                      |
       | GreedyLocal  | 10     | .41                   | .21                  | .42                      | 2500           | 5000                | 0                  | 37                      |
       | MPP          | 10     | .56                   | .15                  | .39                      | 2500           | 5000                | 0                  | 7                       |
-      | DMPP         | 10     | .50                   | .21                  | .38                      | 2500           | 5000                | 0                  | 22                      |
+      | DMPP         | 10     | .50                   | .21                  | .38                      | 2500           | 5000                | 0                  | 23                      |
 
     Examples: with SFF-SFF latency
       | scheduler    | server | expected_success_rate | expected_reject_rate | expected_service_quality | packet_on_wire | within_site_latency | inter_site_latency | expected_max_idle_ratio |
