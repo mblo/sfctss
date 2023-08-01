@@ -1,6 +1,6 @@
 behave==1.2.6
 numpy==1.25.2
 sortedcontainers==2.3.0
-terminaltables==3.1.0
+terminaltables==3.1.10
 sure==1.4.11
 pip-upgrader==1.4.15
